@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+   
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .4s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img { 
+    border-radius: 150px;
+    width: 100%;
+}
+
+main {
+    max-width: 500px;
+    width: 90%;
+    margin: 32px auto;
+
+    margin-top: 32px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47;
+}
+
+section p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 26px;
+}
+
+.my-games > div {
+    background-color: #2A2634;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 32px 32px 32px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.my-games img {
+    border-radius: 5px;
+
+    transition: transform .6s;
+}
+
+.my-games img:hover {
+    transform: scale(1.1);
+}
+
+.meus-canais > div{
+    background-color: #2A2634;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 32px 32px 32px;
+    margin-bottom: 24px;
+}
+
+.channel-list img{
+    border-radius: 150px;
+    border: #443E54 1px solid;
+
+    transition: transform .4s;
+} 
+
+.channel-list img:hover {
+    transform: scale(1.1);
+}
+
+.my-networks > div {
+    background-color: #2A2634;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 32px 32px 32px;
+    margin-bottom: 24px;
+}
+
+.my-networks svg {
+    transition: transform .4s;
+}
+
+.my-networks svg:hover {
+    transform: scale(1.1);
+}
+
+
+/* animation screen image */
+
+header div {
+    animation: fromTop .7s .3s backwards;
+    /* animation-delay: 1s; */
+}
+
+/* animation image top*/
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animation image bottom*/
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        /* transform: translateY(30px); */
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        /* transform: translateY(0); */
+        transform: translateX(0);
+    }
+}
+
+main section {
+    animation: fromBottom .4s backwards;
+} 
+
+/* animando cada sessao separadamente */
+/* meus jogos */
+main section:nth-child(1) { 
+    /* animation: fromBottom .2s .1s; */
+    animation-delay: 0;
+}
+/* canais e streamers */
+main section:nth-child(2) {
+    /* animation: fromBottom .4s .2s; */
+    animation-delay: .2s;
+}
+/* minhas redes */
+main section:nth-child(3) {
+    /* animation: fromBottom .6s .4s; */
+    animation-delay: .4s;
+}
